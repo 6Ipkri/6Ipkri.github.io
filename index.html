@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdn.netpie.io/microgear.js"></script>
+  <script src="js/microgear.js"></script>
+</head>
+
+<body>
+  <center>
+    <h1 id="connected_NETPIE">Hello World!</h1>
+    <button type="button" onclick="switchPress(1)">Turn OFF</button>
+    <button type="button" onclick="switchPress(0)">Turn ON</button>
+    <p style="color: green;"><strong id="Status">Lock is OFF.</strong></p>
+  </center>
+
+  <h3>WebView</h3>
+<input type="text" id="textBox" ></br>
+<button onclick="showMessage()">Show Message</button> 
+</center>
+<script>
+        
+        function setTextField(text) {
+                var text = text;
+                
+                document.getElementById("textBox").value = text;
+        }
+        
+        function showMessage() {
+                Android.showToast();
+        }   
+</script>
+</body>
+
+</html>
