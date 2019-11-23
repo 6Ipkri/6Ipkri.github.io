@@ -9,6 +9,7 @@
   var toggle = 0;
 
   function switchPress(){
+    console.log("toggle" , toggle);
     if(toggle == 1 ){
       microgear.chat(thing1,"ON");
       toggle = 0;
