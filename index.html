@@ -12,24 +12,24 @@
     <button type="button" onclick="switchPress(1)">Turn OFF</button>
     <button type="button" onclick="switchPress(0)">Turn ON</button>
     <p style="color: green;"><strong id="Status">Lock is OFF.</strong></p>
+  <p id="welcome"></p>
   </center>
 
   <h3>WebView</h3>
-<input type="text" id="textBox" ></br>
-<button onclick="showMessage()">Show Message</button> 
-</center>
-<script>
-        
-        function setTextField(text) {
-                var text = text;
-                
-                document.getElementById("textBox").value = text;
-        }
-        
-        function showMessage() {
-                Android.showToast();
-        }   
-</script>
+  <input type="text" id="textBox"></br>
+  <button onclick="showMessage()">Show Message</button>
+  </center>
+  <script>
+    function setTextField(text) {
+      var text = text;
+
+      document.getElementById("welcome").value = text;
+    }
+
+    function showMessage() {
+      Android.showToast();
+    }
+  </script>
 </body>
 
 </html>
