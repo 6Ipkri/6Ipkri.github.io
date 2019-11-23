@@ -13,7 +13,6 @@
     <button type="button" onclick="switchPress(0)">Turn ON</button>
     <p style="color: green;"><strong id="Status">Lock is OFF.</strong></p>
   <p id="welcome"></p>
-  </center>
 
   <h3>WebView</h3>
   <input type="text" id="textBox"></br>
@@ -23,7 +22,7 @@
     function setTextField(text) {
       var text = text;
 
-      document.getElementById("welcome").value = text;
+      document.getElementById("welcome").innerHTML = text;
     }
 
     function showMessage() {
