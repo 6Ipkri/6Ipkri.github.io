@@ -2,12 +2,14 @@
 <html>
 
 <head>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.netpie.io/microgear.js"></script>
   <script src="js/microgear.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Caveat|Patua+One|Permanent+Marker|Work+Sans&display=swap" rel="stylesheet"> 
 </head>
 
 <body>
-  <center>
+  <!-- <center>
     <h1 id="connected_NETPIE">Hello World!</h1>
     <button type="button" onclick="switchPress(1)">Turn OFF</button>
     <button type="button" onclick="switchPress(0)">Turn ON</button>
@@ -17,6 +19,13 @@
   <h3>WebView</h3>
   <input type="text" id="textBox"></br>
   <button onclick="showMessage()">Show Message</button>
+  </center> -->
+  
+<img id="doorImg" src="images/close-door.png">
+<center>
+    <p id="click-door" style="color:white">click the door to <span id="doorStatus">unlock</span>.</p>
+    <p id="connectText" style="color:white">smart door is <span id="connectStatus">not connected</span></p>
+    <h1 style="color:white">Welcome Home!!</h1>
   </center>
   <script>
     function setTextField(text) {

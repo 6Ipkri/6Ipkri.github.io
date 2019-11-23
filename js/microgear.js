@@ -4,13 +4,17 @@
   const SECRET = "g7Df3e9DbF5H3wd2yDxDcu8oN";
 
   const ALIAS = "DigitalOUTPUT_HTML_web";     //  ชื่อตัวเอง
-  const thing1 = "NodeMCU1";                                   //  ชื่อเพื่อนที่จะคุย
+  const thing1 = "NodeMCU1"; //  ชื่อเพื่อนที่จะคุย
 
-  function switchPress(logic){
-    if(logic == 1 ){
+  var toggle = 0;
+
+  function switchPress(){
+    if(toggle == 1 ){
       microgear.chat(thing1,"ON");
-    }else if(logic == 0 ){
+      toggle = 0;
+    }else if(toggle == 0 ){
       microgear.chat(thing1,"OFF");
+      toggle = 1;
     }
   }
 
@@ -23,15 +27,17 @@
 
   microgear.on('message', function(topic,data) {
     if(data=="OFF"){
-      document.getElementById("Status").innerHTML =  "Lock is ON.";
+      document.getElementById("doorStatus").innerHTML =  "unlock";
+      document.getElementById("doorImg").src = "images/close-door.png"
     }else if(data=="ON"){
-      document.getElementById("Status").innerHTML =  "Lock is OFF."; 
+      document.getElementById("doorStatus").innerHTML =  "lock"; 
+      document.getElementById("doorImg").src = "images/open-door.png";
     }
   });
 
   microgear.on('connected', function() {
     microgear.setAlias(ALIAS);
-    document.getElementById("connected_NETPIE").innerHTML = "Connected to NETPIE"
+    document.getElementById("connectStatus").innerHTML = "connected"
   });
 
   microgear.on('present', function(event) {
