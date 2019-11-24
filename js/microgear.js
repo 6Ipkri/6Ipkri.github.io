@@ -34,7 +34,7 @@
     }else if(data=="ON"){
       document.getElementById("click-door").style.backgroundColor = "#824525"
       document.getElementById("doorStatus").innerHTML =  "lock"; 
-      document.getElementById("doorImg").src = "images/unlock-door.png";
+      document.getElementById("doorImg").src = "images/close-door.png";
     }
   });
 
