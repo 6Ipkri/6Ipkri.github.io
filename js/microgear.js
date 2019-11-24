@@ -29,11 +29,11 @@
   microgear.on('message', function(topic,data) {
     if(data=="OFF"){
       document.getElementById("click-door").style.backgroundColor = "#3C5817"
-      document.getElementById("doorStatus").innerHTML =  "unlock";
+      document.getElementById("doorStatus").innerHTML =  "lock";
       document.getElementById("doorImg").src = "images/open-door.png"
     }else if(data=="ON"){
       document.getElementById("click-door").style.backgroundColor = "#824525"
-      document.getElementById("doorStatus").innerHTML =  "lock"; 
+      document.getElementById("doorStatus").innerHTML =  "unlock"; 
       document.getElementById("doorImg").src = "images/close-door.png";
     }
   });
