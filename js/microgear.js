@@ -9,6 +9,7 @@
   var toggle = 0;
 
   function switchPress(){
+    console.log("switchPress " + toggle)
     if(toggle == 1 ){
       microgear.chat(thing1,"ON");
     }else if(toggle == 0 ){
@@ -24,9 +25,9 @@
 
 
   microgear.on('message', function(topic,data) {
+    console.log("message " + toggle)
     if(data=="OFF"){
       toggle = 0;
-     
       document.getElementById("click-door").style.backgroundColor = "#3C5817"
       document.getElementById("doorStatus").innerHTML =  "lock" +toggle;
       document.getElementById("doorImg").src = "images/open-door.png"
