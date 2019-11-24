@@ -25,12 +25,13 @@
 
   microgear.on('message', function(topic,data) {
     if(data=="OFF"){
-      toggle = 1;
+      toggle = 0;
+     
       document.getElementById("click-door").style.backgroundColor = "#3C5817"
       document.getElementById("doorStatus").innerHTML =  "lock" + toggle;
       document.getElementById("doorImg").src = "images/open-door.png"
     }else if(data=="ON"){
-      toggle = 0;
+      toggle = 1;
       document.getElementById("click-door").style.backgroundColor = "#824525"
       document.getElementById("doorStatus").innerHTML =  "unlock" + toggle; 
       document.getElementById("doorImg").src = "images/close-door.png";
