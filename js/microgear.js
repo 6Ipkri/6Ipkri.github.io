@@ -6,7 +6,7 @@
   const ALIAS = "DigitalOUTPUT_HTML_web";     //  ชื่อตัวเอง
   const thing1 = "NodeMCU1"; //  ชื่อเพื่อนที่จะคุย
 
-  var toggle = 1;
+  var toggle = 0;
 
   function switchPress(){
     console.log("toggle" , toggle);
