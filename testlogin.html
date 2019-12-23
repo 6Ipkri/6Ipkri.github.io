@@ -16,6 +16,7 @@
             <button id="sign-in">Sign In/Register</button>
             <button id="sign-out">Sign Out</button>
             <button id="sign-gg">Sign with Google</button>
+            <button id="sign-phone">Sign Phone</button>
         </div>
     </form>
 
@@ -80,7 +81,30 @@
             provider.addScope('profile');
             provider.addScope('email');
             provider.addScope('https://proplante-7d75e.firebaseio.com');
-            firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider());        })
+            firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider());
+        })
+
+        document.querySelector('#sign-phone').addEventListener('click', function (e) {
+            firebase.auth().settings.appVerificationDisabledForTesting = true;
+
+            var phoneNumber = "+664560645";
+            var testVerificationCode = "123456";
+
+            // This will render a fake reCAPTCHA as appVerificationDisabledForTesting is true.
+            // This will resolve after rendering without app verification.
+            var appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+            // signInWithPhoneNumber will call appVerifier.verify() which will resolve with a fake
+            // reCAPTCHA response.
+            firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+                .then(function (confirmationResult) {
+                    // confirmationResult can resolve with the whitelisted testVerificationCode above.
+                    return confirmationResult.confirm(testVerificationCode)
+                }).catch(function (error) {
+                    // Error; SMS not sent
+                    // ...
+                });
+
+        })
     </script>
 
 </body>
