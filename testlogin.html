@@ -19,10 +19,13 @@
             <button id="sign-phone">Sign Phone</button>
         </div>
     </form>
+    <p id="current-user"></p>
 
     <!--Include firebase.js  -->
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
     <!--Configure firebase-->
     <script>
         // Visit https://console.firebase.google.com/project/<your project id>/overview and click on "Add Firebase to your web app"
@@ -30,9 +33,14 @@
             apiKey: "AIzaSyBF0TF5PQNteZwHVKiq_IqnQYDXmFE7CiM",
             authDomain: "proplante-7d75e.firebaseapp.com",
             databaseURL: "https://proplante-7d75e.firebaseio.com",
+            projectId: "proplante-7d75e",
             storageBucket: "proplante-7d75e.appspot.com",
+            messagingSenderId: "561205632101",
+            appId: "1:561205632101:web:ba99b04a5568e667b0fa8c",
+            measurementId: "G-J760F0W3ZF"
         };
         firebase.initializeApp(config);
+        firebase.auth().languageCode = 'it';
     </script>
 
     <!--Handle auth events-->
@@ -40,6 +48,8 @@
         firebase.auth().onAuthStateChanged(function (user) {
             window.user = user;
             console.log(user.email);
+            var cuserr = document.getElementById("current-user");
+            cuserr.innerHTML = user.email;
             // Step 1:
             //  If no user, sign in anonymously with firebase.auth().signInAnonymously()
             //  If there is a user, log out out user details for debugging purposes.
@@ -85,14 +95,31 @@
         })
 
         document.querySelector('#sign-phone').addEventListener('click', function (e) {
-            firebase.auth().settings.appVerificationDisabledForTesting = true;
+            // firebase.auth().settings.appVerificationDisabledForTesting = true;
 
             var phoneNumber = "+664560645";
             var testVerificationCode = "123456";
+            window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-phone', {
+                'size': 'invisible',
+                'callback': function (response) {
+                    // reCAPTCHA solved, allow signInWithPhoneNumber.
+
+                }
+            });
+
+            recaptchaVerifier.render().then(function (widgetId) {
+                window.recaptchaWidgetId = widgetId;
+            });
+
+
+            var recaptchaResponse = grecaptcha.getResponse(window.recaptchaWidgetId);
+            console.log(recaptchaResponse);
+
 
             // This will render a fake reCAPTCHA as appVerificationDisabledForTesting is true.
             // This will resolve after rendering without app verification.
-            var appVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+            var appVerifier = window.recaptchaVerifier;
+
             // signInWithPhoneNumber will call appVerifier.verify() which will resolve with a fake
             // reCAPTCHA response.
             firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
@@ -102,6 +129,7 @@
                 }).catch(function (error) {
                     // Error; SMS not sent
                     // ...
+                    console.log(error)
                 });
 
         })
