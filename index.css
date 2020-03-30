@@ -1,0 +1,98 @@
+body {
+  background-color: #000;
+  color: rgb(255, 255, 255);
+
+  /* Allow mouse dragging. */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* disable touch panning/zooming */
+  -ms-touch-action: none;
+  touch-action: none;
+
+  /* Allow canvas to hit the edges of the browser viewport. */
+  margin: 0;
+  height: 100vh;
+}
+
+#screen canvas {
+  margin: auto;
+
+  /* Hide the gap for font descenders. */
+  display: block;
+
+  /* disable scaling interpolation */
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+#current-word {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  padding: 10px;
+  display: none;
+  border-radius: 23px;
+  font-size: 52px;
+  font-family: "DPComic";
+  background: #0000;
+  border-color: #0000;
+}
+
+/* ! key board */
+* {
+  text-decoration: none;
+  color: #262626;
+  font-family: 'Nunito', sans-serif;
+}
+
+@font-face {
+  font-family: wingding;
+  src: url("https://www.dropbox.com/pri/get/public/wingding.ttf");
+}
+
+table {
+  display: inline-block;
+  border-collapse: separate;
+  border-spacing: 3px 6px;
+}
+
+.wrapper {
+  box-shadow: 0.5px 3px 1px #262626, inset 0.1px 0.10px 1px white;
+  padding: 10px;
+  background: #696969;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+td>a>span {
+  font-size: 12px;
+}
+
+td>a {
+  font-size: 15px;
+}
+
+td:active {
+  box-shadow: 0.5px 3px 0.2px #262626, inset 0.1px 0.10px 1px white;
+}
+
+td {
+  background: #ffffff;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0.01px 5px 0.2px #262626, inset 0.1px 0.10px 1px white;
+}

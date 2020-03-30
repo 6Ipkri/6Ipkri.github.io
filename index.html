@@ -1,897 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Dashboard</title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Tempusdominus Bbootstrap 4 -->
-  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../assets/css/allelements.css" />
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="../assets/js/connectBackend.js"></script>
+  <title>MASKLIVERY</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
-
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar --> 
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Widgets
-                <span class="right badge badge-danger">New</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Layout Options
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Boxed</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Sidebar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Navbar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Footer</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Collapsed Sidebar</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Charts
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ChartJS</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Flot</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inline</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
-              <p>
-                UI Elements
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Icons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/buttons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buttons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/sliders.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sliders</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/modals.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modals & Alerts</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/navbar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Navbar & Tabs</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/timeline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Timeline</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/ribbons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ribbons</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Forms
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Editors</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tables
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-header">EXAMPLES</li>
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
-                Calendar
-                <span class="badge badge-info right">2</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Gallery
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
-                Mailbox
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Read</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Pages
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/examples/invoice.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Invoice</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/profile.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/e_commerce.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>E-commerce</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/projects.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Projects</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project_add.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Add</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project_edit.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Edit</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project_detail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Detail</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/contacts.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Contacts</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-plus-square"></i>
-              <p>
-                Extras
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/examples/login.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Login</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/register.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Register</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/forgot-password.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Forgot Password</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/recover-password.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Recover Password</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/lockscreen.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Lockscreen</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/legacy-user-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Legacy User Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/language-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Language Menu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/404.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 404</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/500.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 500</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/pace.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Pace</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/blank.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Blank Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="starter.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Starter Page</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-header">MISCELLANEOUS</li>
-          <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Documentation</p>
-            </a>
-          </li>
-          <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-circle"></i>
-              <p>
-                Level 1
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-              <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>
-                    Level 2
-                    <i class="right fas fa-angle-left"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Level 3</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Level 2</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
-            </a>
-          </li>
-          <li class="nav-header">LABELS</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Important</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Warning</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i> 
-              <p>Informational</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <div id="map">
-    
-    </div>
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <p>198499 Computer Engineering Projects by 20-SE</p>
-    
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.1
-    </div>
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGwWZK_bbs0Q4fdGToSaVaymJbKz9bWWg&libraries=drawing,places,geometry&callback=initMap"
-    async defer></script>
-    <script src="../assets/js/connectServer.js"></script>
-    <script src="../assets/js/showLandMain.js"></script>
-    <script src="../assets/js/mainPageFunc.js"></script>
-
-  
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button)
-</script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-<script src="plugins/chart.js/Chart.min.js"></script>
-<!-- Sparkline -->
-<script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="plugins/moment/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
-<!-- Tempusdominus Bootstrap 4 -->
-<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<!-- Summernote -->
-<script src="plugins/summernote/summernote-bs4.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-</body>
-</html>
-=======
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>PROPLANTE</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/CS%20ChatThai.css" />
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
-    <link rel="stylesheet" href="assets/css/MainLoginPage.css" />
-</head>
-
 <body>
-    <div id="bg-mobile">
-        <img id="img-bg-mobile"  src="assets/img/slide1.jpg" />
-    </div>
-    
+  <!-- Canvas placeholder -->
+  <div id="screen"></div>
 
-    <div class="row">
-        <div class="column" id="slideshow">
-            <div></div>
-            <div class="carousel slide" data-ride="carousel" id="picSlide">
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                        <img class="img-fluid w-100 d-block" id="pic" src="assets/img/slide1.jpg" />
-                    </div>
+  <!-- melonJS Library -->
+  <script type="text/javascript" src="../../dist/melonjs.js"></script>
 
-                    <div class="carousel-item">
-                        <img class="w-100 d-block" id="pic" src="assets/img/slide2.jpg" alt="Slide Image" />
-                    </div>
+  <!-- Plugin(s) -->
+  <script type="text/javascript" src="../../plugins/debug/debugPanel.js"></script>
 
-                    <div class="carousel-item">
-                        <img class="w-100 d-block" id="pic" src="assets/img/slide3.jpg" alt="Slide Image" />
-                    </div>
+  <!-- Game Scripts -->
+  <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/resources.js"></script>
 
-                    <div class="carousel-item">
-                        <img class="w-100 d-block" id="pic" src="assets/img/slide5.jpg" alt="Slide Image" />
-                    </div>
+  <script type="text/javascript" src="js/entities/player.js"></script>
+  <script type="text/javascript" src="js/entities/coin.js"></script>
+  <script type="text/javascript" src="js/entities/enemies.js"></script>
+  <script type="text/javascript" src="js/entities/HUD.js"></script>
 
-                    <div class="carousel-item">
-                        <img class="w-100 d-block" id="pic" src="assets/img/slide7.jpg" alt="Slide Image" />
-                    </div>
-                </div>
-                <div>
-                    <a class="carousel-control-prev" href="#picSlide" role="button" data-slide="prev"><span
-                            class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a
-                        class="carousel-control-next" href="#picSlide" role="button" data-slide="next"><span
-                            class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a>
-                </div>
-                <ol class="carousel-indicators">
-                    <li data-target="#picSlide" data-slide-to="0" class="active"></li>
-                    <li data-target="#picSlide" data-slide-to="1"></li>
-                    <li data-target="#picSlide" data-slide-to="2"></li>
-                    <li data-target="#picSlide" data-slide-to="3"></li>
-                    <li data-target="#picSlide" data-slide-to="4"></li>
-                </ol>
-            </div>
-        </div>
+  <!--<script type="text/javascript" src="js/entities/controls.js"></script>-->
 
-        <div class="column" id="login">
-            <div class="center-horizontal">
-                <!--! selectRole  -->
-                <div class="login">
-                    <div id="titile-div" class="titile">
-                        <p id="title">
-                            <img id="icon" src="assets/img/icon.png" /><strong>&nbsp;PROPLANTE</strong>
-                        </p>
-                    </div>
-                    <p id="subtitle">
-                        ดูแลและจัดการสวนของคุณอย่างง่ายดายเพียงปลายนิ้ว<br />
-                    </p>
-                    <p id="selectRole">โปรดเลือกบทบาทของคุณ<br /></p>
-                    <div class="roleButton">
-                        <a href="#owner-login">
-                            <button class="btn btn-primary" id="ownerBtn" type="button">
-                                &nbsp;ฉันเป็นเจ้าของสวน&nbsp;
-                            </button></a>
-                        <a href="#manager-login"><button class="btn btn-primary" id="managerBtn" type="button"
-                                style="margin: 20px;">
-                                &nbsp;ฉันเป็นผู้ดูแลสวน&nbsp;
-                            </button></a>
-                    </div>
-                    <div id="credit">
-                        <p id="subject">
-                            198499 Computer Engineering Project 2019 by 20-SE&nbsp;
-                        </p>
-                    </div>
-                </div>
-                <!--! owner login -->
-                <div class="owner-login" style="display:none;">
-                    <div id="titile-div" class="titile">
-                        <p id="title">
-                            <img id="icon" src="assets/img/icon.png" /><strong>&nbsp;PROPLANTE</strong>
-                        </p>
-                    </div>
-                    <center>เข้าสู่ระบบ:เจ้าของสวน</center>
-                    <form>
-                        <label for="email">อีเมล</label>
-                        <input type="text" id="email-owner-login" name="email" placeholder="อีเมล" />
-                        <label for="pass">รหัสผ่าน</label>
-                        <input type="password" id="pass-owner-login" name="pass" placeholder="รหัสผ่าน" />
-                        <div class="roleButton">
-                            <a href="#owner-rergis">
-                                <button class="btn btn-primary" id="regis-bt" type="button">
-                                    &nbsp;ลงทะเบียน&nbsp;
-                                </button>
-                            </a>
-                            <a href="#owner-authen">
-                                <button class="btn btn-primary" id="login-bt" type="button"
-                                    style="filter: brightness(100%);margin: 20px;">
-                                    &nbsp;เข้าสู่ระบบ&nbsp;
-                                </button>
-                            </a>
-                        </div>
-                    </form>
-                    <a href="#owner-rergis-gg">
-                        <button class="btn-google">
-                            <p>
-                                <span><img src="assets/img/google.png" width="30px" /></span>&nbsp;&nbsp;เข้าสู่ระบบด้วย
-                                Google
-                            </p>
-                        </button>
-                    </a>
-                </div>
-                <!--! owner regis -->
-                <div class="owner-register" style="display:none;">
-                    <div id="titile-div" class="titile">
-                        <p id="title">
-                            <img id="icon" src="assets/img/icon.png" /><strong>&nbsp;PROPLANTE</strong>
-                        </p>
-                    </div>
-                    <center>สมัครสมาชิก:เจ้าของสวน</center>
-                    <form>
-                        <label for="email">อีเมล</label>
-                        <input type="text" id="email-owner-regis" name="email" placeholder="อีเมล" />
-                        <label for="pass">รหัสผ่าน</label>
-                        <input type="password" id="pass-owner-regis" name="pass" placeholder="รหัสผ่าน" />
-                        <label for="name">ชื่อ</label>
-                        <input type="text" id="name-owner-regis" name="lastname" placeholder="ชื่อ" />
+  <script type="text/javascript" src="js/screens/play.js"></script>
+  <script type="text/javascript" src="js/StateManager.js"></script>
+  <script type="text/javascript" src="js/ActionWordsService.js"></script>
+  <script type="text/javascript" src="js/constants.js"></script>
+  <script type="text/javascript" src="js/keyboardControl.js"></script>
 
-                        <div class="roleButton">
-                            <a href="#owner-rergis-success">
-                                <button class="btn btn-primary" id="regis-con-bt" type="button">
-                                    &nbsp;ลงทะเบียน&nbsp;
-                                </button>
-                            </a>
-                        </div>
-                    </form>
-                </div>
-                <!--! owner regis Google   -->
-                <div class="owner-gg-register" style="display:none;">
-                    <div id="titile-div" class="titile">
-                        <p id="title">
-                            <img id="icon" src="assets/img/icon.png" /><strong>&nbsp;PROPLANTE</strong>
-                        </p>
-                    </div>
-                    <center>สมัครสมาชิก:เจ้าของสวน</center>
-                    <form>
-                        <label for="name">ชื่อ</label>
-                        <input type="text" id="name-owner-gg-regis" name="name" placeholder="ชื่อ" />
-                        <div class="roleButton">
-                            <a href="#owner-rergis-success">
-                                <button class="btn btn-primary" id="button-login-regis" type="button">
-                                    &nbsp;ลงทะเบียน&nbsp;
-                                </button>
-                            </a>
-                        </div>
-                    </form>
-                </div>
-                <!--! managerr login -->
-                <div class="manager-login" style="display:none;">
-                    <div id="titile-div" class="titile">
-                        <p id="title">
-                            <img id="icon" src="assets/img/icon.png" /><strong>&nbsp;PROPLANTE</strong>
-                        </p>
-                    </div>
-                    <center>เข้าสู่ระบบ:ผู้ดูแลสวน</center>
-                    <form>
-                        <label for="phone-manager">เบอร์โทรศัพท์</label>
-                        <input type="text" id="phone-manager-login" name="phone-manage" placeholder="เบอร์โทรศัพท์" />
 
-                        <div class="roleButton">
-                            <a href="#manager-rergis">
-                                <button class="btn btn-primary" id="regis-manager-bt" type="button">
-                                   &nbsp;ลงทะเบียน&nbsp;
-                                </button>
-                            </a>
-                            <a href="#manager-authen">
-                                <button class="btn btn-primary" id="login-manager-bt" type="button"
-                                    style="filter: brightness(100%);margin: 20px;">
-                                    &nbsp;เข้าสู่ระบบ&nbsp;
-                                </button>
-                            </a>
-                        </div>
-                    </form>
-                </div>
-                <!--! manager regis -->
-                <div class="manager-regis" style="display:none;">
-                    <div id="titile-div" class="titile">
-                        <p id="title">
-                            <img id="icon" src="assets/img/icon.png" /><strong>&nbsp;PROPLANTE</strong>
-                        </p>
-                    </div>
-                    <center>ลงทะเบียน:ผู้ดูแลสวน</center>
-                    <form>
-                        <label for="code">รหัสที่ได้รับจากเจ้าของสวน</label>
-                        <input type="text" id="code-manager-regis" name="code" placeholder="รหัส" />
-                        <label for="name">ชื่อ</label>
-                        <input type="text" id="name-manager-regis" name="name" placeholder="ชื่อ" />
-                        <label for="address">ที่อยู่</label>
-                        <input type="text" id="address-manager-regis" name="address" placeholder="ที่อยู่" />
-                        <label for="phone">เบอร์โทรศัพท์</label>
-                        <input type="text" id="phone-manager-regis" name="phone" placeholder="เบอร์โทรศัพท์" />
+  <!-- Bootstrap -->
+  <script type="text/javascript">
+      me.device.onReady(function onReady() {
+          game.onload();
+      });
+  </script>
 
-                        <div class="roleButton">
-                            <a href="#manager-regis-success">
-                                <button class="btn btn-primary" id="regis-regis-manager-bt" type="button">
-                                    &nbsp;ลงทะเบียน&nbsp;
-                                </button>
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="docs/assets/js/jquery.min.js"></script>
-    <script src="docs/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="docs/assets/js/authenSelect.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <input type="text" id="current-word" />
+  <div class="wrapper">
+    <table>
+        <tr>
+            <td colspan="2">   </td>
+            <td id="q"> Q </td>
+            <td id="w"> W </td>
+            <td id="e"> E </td>
+            <td id="r"> R </td>
+            <td id="t"> T </td>
+            <td id="y"> Y </td>
+            <td id="u"> U </td>
+            <td id="i"> I </td>
+            <td id="o"> O </td>
+            <td id="p"> P </td>
+            <td> {<br>[ </td>
+            <td> }<br>] </td>
+            <td> ¦<br>\ </td>
 
-  </body>
+        </tr>
+        <tr>
+            <td colspan="2">  <br>  </td>
+            <td id="a"> A </td>
+            <td id="s"> S </td>
+            <td id="d"> D </td>
+            <td id="f"> F </td>
+            <td id="g"> G </td>
+            <td id="h"> H </td>
+            <td id="j"> J </td>
+            <td id="k"> K </td>
+            <td id="l"> L </td>
+            <td> :<br>; </td>
+            <td> "<br>' </td>
+            <td colspan="2">   </td>
 
+        </tr>
+        <tr>
+            <td colspan="3">   </td>
+            <td id="z"> Z </td>
+            <td id="x"> X </td>
+            <td id="c"> C </td>
+            <td id="v"> V </td>
+            <td id="b"> B </td>
+            <td id="n"> N </td>
+            <td id="m"> M </td>
+            <td> < <br>,
+                 </td>
+            <td> ><br>. </td>
+            <td> ?<br>/ </td>
+            <td>   </td>
+            <td>   </td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><a style="color:#5886a6;padding-right:40px;" href="">  </td>
+            <td>   </td>
+            <td><a style="font-family: wingdings" href="">  </td>
+            <td>   </td>
+            <td colspan="4"> Space </td>
+            <td>   </td>
+            <td><a style="font-family: wingdings" href="">  </td>
+            <td>   </td>
+            <td>   </td>
+            <td>   </td>
+            <td>   </td>
+
+        </tr>
+    </table>
+</div>
+</body>
 </html>
